@@ -50,13 +50,13 @@ This project is ideal for students who want to:
 
 1. **Clone the repository:**
 
-```bash
-git clone https://github.com/Oluwafemi00/cs-pathfinder.git```
+` ```bash
+git clone https://github.com/Oluwafemi00/cs-pathfinder.git``` `
 
 
 
-```bash
-cd cs-pathfinder```
+` ```bash
+cd cs-pathfinder``` `
 
 ---
 ## Contributing
@@ -67,18 +67,18 @@ We welcome contributions from the community! If you have resources, tutorials, o
 ---
 2. **Create a branch for your changes:**
 
-```bash
-git checkout -b feature/your-feature```
+` ```bash
+git checkout -b feature/your-feature``` `
 
 3. **Commit your updates:**
 
-```bash
-git commit -m "Add new resources for <topic>"```
+` ```bash
+git commit -m "Add new resources for <topic>"``` `
 ---
 4. **## Push to your branch:**
 
-```bash
-git push origin feature/your-feature```
+` ```bash
+git push origin feature/your-feature``` `
 ---
 5. **Open a Pull Request describing your changes.**
 ---
