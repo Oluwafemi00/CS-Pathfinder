@@ -53,7 +53,8 @@ This project is ideal for students who want to:
 
 3. **Navigate into the project folder**
 
-    ```bash cd cs-pathfinder```
+    ```bash
+    cd cs-pathfinder
 
 ---
 
@@ -68,7 +69,7 @@ We welcome contributions from the community! If you have resources, tutorials, o
 2. **Create a branch for your changes:**
 
     ```bash
-git checkout -b feature/your-feature
+    git checkout -b feature/your-feature
 
 3. **Commit your updates:**
 
@@ -80,7 +81,7 @@ git commit -m "Add new resources for <topic>"
 4. **Push to your branch:**
 
     ```bash
-git push origin feature/your-feature
+    git push origin feature/your-feature
 
 ---
 
