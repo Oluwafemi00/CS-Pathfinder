@@ -51,7 +51,9 @@ This project is ideal for students who want to:
     ` ```bash
 git clone https://github.com/Oluwafemi00/cs-pathfinder.git``` `
 
-2. ` ```bash
+2. **Navigate into the project folder**
+
+    ` ```bash
 cd cs-pathfinder``` `
 
 ---
@@ -77,7 +79,7 @@ git commit -m "Add new resources for <topic>"``` `
 
 ---
 
-4. ** Push to your branch:**
+4. **Push to your branch:**
 
    ` ```bash
 git push origin feature/your-feature``` `
@@ -90,7 +92,7 @@ git push origin feature/your-feature``` `
 ---
 
 
-##Contact
+**Contact**
 
 Made with passion by Dev_Femi (https://github.com/Oluwafemi00)  
 
