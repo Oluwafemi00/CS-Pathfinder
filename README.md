@@ -53,16 +53,18 @@ This project is ideal for students who want to:
 ```bash
 git clone https://github.com/Oluwafemi00/cs-pathfinder.git```
 
+---
+
 ```bash
 cd cs-pathfinder```
 
-
+---
 ## Contributing
 
 We welcome contributions from the community! If you have resources, tutorials, or project ideas, you can contribute:
 
 1. **Fork the repository**  
-
+---
 2. **Create a branch for your changes:**
 
 ```bash
@@ -72,14 +74,14 @@ git checkout -b feature/your-feature```
 
 ```bash
 git commit -m "Add new resources for <topic>"```
-
+---
 4. **## Push to your branch:**
 
 ```bash
 git push origin feature/your-feature```
-
+---
 5. **Open a Pull Request describing your changes.**
-
+---
 ## License
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
