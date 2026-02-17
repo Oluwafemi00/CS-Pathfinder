@@ -48,7 +48,7 @@ This project is ideal for students who want to:
 
 1. **Clone the repository:**
 
-     ```bash git clone https://github.com/Oluwafemi00/cs-pathfinder.git ``` 
+     ` ```bash git clone https://github.com/Oluwafemi00/cs-pathfinder.git ``` `
 
 2. **Navigate into the project folder**
 
