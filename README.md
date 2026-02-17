@@ -74,7 +74,7 @@ We welcome contributions from the community! If you have resources, tutorials, o
 3. **Commit your updates:**
 
     ```bash
-    git commit -m "Add new resources for <topic> "
+    git commit -m "Add new resources for <topic>"
 
 ---
 
