@@ -19,10 +19,10 @@ This project is ideal for students who want to:
 
 ## Features
 
-- 📚 **Curated Resources** – Carefully selected tutorials, articles, and documentation  
-- 🛠 **Hands-on Projects** – Mini-projects and exercises for practical learning  
-- 🧭 **Learning Paths** – Structured pathways for various CS topics  
-- ⚡ **Quick Access** – Organized links for fast navigation  
+- **Curated Resources** – Carefully selected tutorials, articles, and documentation  
+- **Hands-on Projects** – Mini-projects and exercises for practical learning  
+- **Learning Paths** – Structured pathways for various CS topics  
+- **Quick Access** – Organized links for fast navigation  
 
 ---
 
