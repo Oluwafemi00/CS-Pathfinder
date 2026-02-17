@@ -99,4 +99,4 @@ Feel free to connect on [LinkedIn](https://linkedin.com/in/sodiq-oladele).
 
 ---
 
-*CS Pathfinder bridges the gap between theory and practice for computer science students. Start your learning journey today!*
+*CS Pathfinder bridges the gap between theory and practice for computer science students. Thank you for your contribution!*
