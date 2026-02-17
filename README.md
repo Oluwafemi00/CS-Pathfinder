@@ -1,6 +1,4 @@
 # CS Pathfinder 🚀
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Language-Python-blue)](https://www.python.org/)
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](https://github.com/yourusername/cs-pathfinder)
@@ -50,11 +48,11 @@ This project is ideal for students who want to:
 
 1. **Clone the repository:**
 
-` ```bash
-git clone https://github.com/Oluwafemi00/cs-pathfinder.git``` `
+```bash
+git clone https://github.com/Oluwafemi00/cs-pathfinder.git```
 
-` ```bash
-cd cs-pathfinder``` `
+ ```bash
+cd cs-pathfinder```
 
 ---
 
@@ -73,15 +71,15 @@ git checkout -b feature/your-feature``` `
 
 3. **Commit your updates:**
 
-` ```bash
-git commit -m "Add new resources for <topic>"``` `
+ ```bash
+git commit -m "Add new resources for <topic>"``` 
 
 ---
 
-4. **## Push to your branch:**
+4. ** Push to your branch:**
 
-` ```bash
-git push origin feature/your-feature``` `
+ ```bash
+git push origin feature/your-feature```
 
 ---
 
