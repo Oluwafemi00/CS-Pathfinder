@@ -70,19 +70,19 @@ We welcome contributions from the community! If you have resources, tutorials, o
 
 
    ` ```bash
-git checkout -b feature/your-feature``` `
+git checkout -b feature/your-feature`
 
 3. **Commit your updates:**
 
    ` ```bash
-git commit -m "Add new resources for <topic>"``` `
+git commit -m "Add new resources for <topic>"`
 
 ---
 
 4. **Push to your branch:**
 
    ` ```bash
-git push origin feature/your-feature``` `
+git push origin feature/your-feature`
 
 ---
 
