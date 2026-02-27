@@ -97,12 +97,4 @@ We welcome contributions from the community! If you have resources, tutorials, o
 
 ---
 
-**Contact**
-
-Made with passion by Dev_Femi (https://github.com/Oluwafemi00)
-
-Feel free to connect on [LinkedIn](https://linkedin.com/in/sodiq-oladele).
-
----
-
 _CS Pathfinder bridges the gap between theory and practice for computer science students. Thank you for your contribution!_
