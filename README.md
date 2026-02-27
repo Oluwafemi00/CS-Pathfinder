@@ -1,4 +1,5 @@
-# CS Pathfinder 🚀
+# CS Pathfinder
+
 [![Python](https://img.shields.io/badge/Language-Python-blue)](https://www.python.org/)
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](https://github.com/yourusername/cs-pathfinder)
@@ -11,29 +12,29 @@
 
 This project is ideal for students who want to:
 
-- Bridge the gap between theory and practice  
-- Build a portfolio of small projects and exercises  
-- Learn programming, data structures, web development, databases, and system-level concepts efficiently  
+- Bridge the gap between theory and practice
+- Build a portfolio of small projects and exercises
+- Learn programming, data structures, web development, databases, and system-level concepts efficiently
 
 ---
 
 ## Features
 
-- **Curated Resources** – Carefully selected tutorials, articles, and documentation  
-- **Hands-on Projects** – Mini-projects and exercises for practical learning  
-- **Learning Paths** – Structured pathways for various CS topics  
-- **Quick Access** – Organized links for fast navigation  
+- **Curated Resources** – Carefully selected tutorials, articles, and documentation
+- **Hands-on Projects** – Mini-projects and exercises for practical learning
+- **Learning Paths** – Structured pathways for various CS topics
+- **Quick Access** – Organized links for fast navigation
 
 ---
 
 ## Topics Covered
 
-- **Programming Languages:** Python, C++, Java, JavaScript  
-- **Data Structures & Algorithms** – Lists, Trees, Graphs, Sorting, Searching  
-- **Databases & SQL** – Relational Databases, Queries, Design  
-- **Web Development** – Frontend (HTML, CSS, React) & Backend (Node.js, Express)  
-- **Operating Systems & System Programming** – Processes, Threads, Memory Management  
-- **Software Engineering** – Best practices, Git, Version Control  
+- **Programming Languages:** Python, C++, Java, JavaScript
+- **Data Structures & Algorithms** – Lists, Trees, Graphs, Sorting, Searching
+- **Databases & SQL** – Relational Databases, Queries, Design
+- **Web Development** – Frontend (HTML, CSS, React) & Backend (Node.js, Express)
+- **Operating Systems & System Programming** – Processes, Threads, Memory Management
+- **Software Engineering** – Best practices, Git, Version Control
 
 ---
 
@@ -41,7 +42,7 @@ This project is ideal for students who want to:
 
 ### Prerequisites
 
-- Git installed ([Download Git](https://git-scm.com/downloads))  
+- Git installed ([Download Git](https://git-scm.com/downloads))
 - Optional: Code editor like [VS Code](https://code.visualstudio.com/)
 
 ### Installation
@@ -51,10 +52,13 @@ This project is ideal for students who want to:
    ```bash
    git clone https://github.com/Oluwafemi00/cs-pathfinder.git
 
-3. **Navigate into the project folder**
+   ```
 
-    ```bash
-    cd cs-pathfinder
+2. **Navigate into the project folder**
+
+   ```bash
+   cd cs-pathfinder
+   ```
 
 ---
 
@@ -62,41 +66,43 @@ This project is ideal for students who want to:
 
 We welcome contributions from the community! If you have resources, tutorials, or project ideas, you can contribute:
 
-1. **Fork the repository**  
+1. **Fork the repository**
 
 ---
 
 2. **Create a branch for your changes:**
 
-    ```bash
-    git checkout -b feature/your-feature
+   ```bash
+   git checkout -b feature/your-feature
+
+   ```
 
 3. **Commit your updates:**
 
-    ```bash
-    git commit -m "Add new resources for <topic>"
+   ```bash
+   git commit -m "Add new resources for <topic>"
+   ```
 
 ---
 
 4. **Push to your branch:**
 
-    ```bash
-    git push origin feature/your-feature
+   ```bash
+   git push origin feature/your-feature
+   ```
 
 ---
 
 5. **Open a Pull Request describing your changes.**
 
-
 ---
-
 
 **Contact**
 
-Made with passion by Dev_Femi (https://github.com/Oluwafemi00)  
+Made with passion by Dev_Femi (https://github.com/Oluwafemi00)
 
 Feel free to connect on [LinkedIn](https://linkedin.com/in/sodiq-oladele).
 
 ---
 
-*CS Pathfinder bridges the gap between theory and practice for computer science students. Thank you for your contribution!*
+_CS Pathfinder bridges the gap between theory and practice for computer science students. Thank you for your contribution!_
