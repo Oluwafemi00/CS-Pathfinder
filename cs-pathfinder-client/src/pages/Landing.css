@@ -1,0 +1,117 @@
+/* src/pages/Landing.css */
+
+.landing-container {
+  width: 100%;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+  animation: heroReveal 1.2s ease-out forwards;
+}
+
+.hero-title {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 5vw, 4rem); /* Automatically scales on mobile! */
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Secondary Button Variant */
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--text-light);
+  color: var(--primary-blue);
+  border: 2px solid var(--text-light);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+/* --- Info Card (Preserving your animation) --- */
+.info-section {
+  margin-bottom: 4rem;
+}
+
+.info-card {
+  max-width: 800px;
+  padding: 2rem;
+  border: 2px solid var(--text-light);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  animation: moveZoom 4s ease-in-out infinite alternate;
+}
+
+.info-card h2 {
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+}
+
+/* --- Path Cards (Using the grid from index.css) --- */
+.path-card {
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius);
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.path-card:hover {
+  background: var(--text-light);
+  color: var(--primary-blue);
+  transform: translateY(-5px);
+  border-color: var(--text-light);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Animations --- */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes moveZoom {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
