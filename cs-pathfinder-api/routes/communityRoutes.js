@@ -1,27 +1,16 @@
+// routes/communityRoutes.js
 import express from "express";
-import { createClient } from "@supabase/supabase-js";
+import { requireAuth } from "../middleware/auth.js";
 
 const router = express.Router();
 
-// Helper function to create a Supabase client that acts as the logged-in user
-const getAuthClient = (req) => {
-  // Extract the token React sent us in the headers
-  const token = req.headers.authorization?.split(" ")[1];
+// All community routes require a valid session
+router.use(requireAuth);
 
-  // Create a temporary client with that specific user's token
-  return createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY, {
-    global: {
-      headers: { Authorization: `Bearer ${token}` },
-    },
-  });
-};
-
-// GET /api/community
+// GET /api/community — fetch all posts, oldest first (for chat-style scroll)
 router.get("/", async (req, res) => {
   try {
-    const supabaseAuthClient = getAuthClient(req); // Use the authenticated client!
-
-    const { data: posts, error } = await supabaseAuthClient
+    const { data: posts, error } = await req.supabase
       .from("community_posts")
       .select(
         `
@@ -32,37 +21,45 @@ router.get("/", async (req, res) => {
         profiles ( username )
       `,
       )
-      .order("created_at", { ascending: false });
+      .order("created_at", { ascending: true }); // ✅ oldest first for chat UI
 
     if (error) throw error;
     res.status(200).json(posts);
   } catch (error) {
     console.error("Error fetching community posts:", error.message);
-    res.status(500).json({ error: "Server error fetching posts" });
+    res.status(500).json({ error: "Server error fetching posts." });
   }
 });
 
-// POST /api/community
+// POST /api/community — create a new post
 router.post("/", async (req, res) => {
-  const { user_id, content } = req.body;
+  const { content } = req.body;
 
-  if (!user_id || !content) {
-    return res.status(400).json({ error: "User ID and content are required." });
+  if (!content?.trim()) {
+    return res.status(400).json({ error: "Content is required." });
   }
 
   try {
-    const supabaseAuthClient = getAuthClient(req); // Use the authenticated client!
-
-    const { data, error } = await supabaseAuthClient
+    // ✅ user_id resolved server-side from the verified JWT — not trusted from body
+    const { data, error } = await req.supabase
       .from("community_posts")
-      .insert([{ user_id, content }])
-      .select();
+      .insert([{ user_id: req.user.id, content: content.trim() }])
+      .select(
+        `
+        id,
+        content,
+        created_at,
+        user_id,
+        profiles ( username )
+      `,
+      )
+      .single();
 
     if (error) throw error;
-    res.status(201).json(data[0]);
+    res.status(201).json(data);
   } catch (error) {
     console.error("Error creating post:", error.message);
-    res.status(500).json({ error: "Server error creating post" });
+    res.status(500).json({ error: "Server error creating post." });
   }
 });
 

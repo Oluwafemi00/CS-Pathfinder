@@ -1,16 +1,100 @@
-# React + Vite
+# CS Pathfinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Python](https://img.shields.io/badge/Language-Python-blue)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen)](https://github.com/yourusername/cs-pathfinder)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
 
-## React Compiler
+**CS Pathfinder** is a project dedicated to helping computer science undergraduates **learn practical skills while mastering theoretical knowledge**. It organizes and curates high-quality online resources, tutorials, and projects in a structured way, so students can confidently apply what they learn in the classroom to real-world scenarios.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is ideal for students who want to:
 
-## Expanding the ESLint configuration
+- Bridge the gap between theory and practice
+- Build a portfolio of small projects and exercises
+- Learn programming, data structures, web development, databases, and system-level concepts efficiently
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- **Curated Resources** – Carefully selected tutorials, articles, and documentation
+- **Hands-on Projects** – Mini-projects and exercises for practical learning
+- **Learning Paths** – Structured pathways for various CS topics
+- **Quick Access** – Organized links for fast navigation
+
+---
+
+## Topics Covered
+
+- **Programming Languages:** Python, C++, Java, JavaScript
+- **Data Structures & Algorithms** – Lists, Trees, Graphs, Sorting, Searching
+- **Databases & SQL** – Relational Databases, Queries, Design
+- **Web Development** – Frontend (HTML, CSS, React) & Backend (Node.js, Express)
+- **Operating Systems & System Programming** – Processes, Threads, Memory Management
+- **Software Engineering** – Best practices, Git, Version Control
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Git installed ([Download Git](https://git-scm.com/downloads))
+- Optional: Code editor like [VS Code](https://code.visualstudio.com/)
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Oluwafemi00/cs-pathfinder.git
+
+   ```
+
+2. **Navigate into the project folder**
+
+   ```bash
+   cd cs-pathfinder
+   ```
+
+---
+
+## Contributing
+
+We welcome contributions from the community! If you have resources, tutorials, or project ideas, you can contribute:
+
+1. **Fork the repository**
+
+---
+
+2. **Create a branch for your changes:**
+
+   ```bash
+   git checkout -b feature/your-feature
+
+   ```
+
+3. **Commit your updates:**
+
+   ```bash
+   git commit -m "Add new resources for <topic>"
+   ```
+
+---
+
+4. **Push to your branch:**
+
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+---
+
+5. **Open a Pull Request describing your changes.**
+
+---
+
+_CS Pathfinder bridges the gap between theory and practice for computer science students. Thank you for your contribution!_

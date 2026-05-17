@@ -1,0 +1,322 @@
+/* src/pages/Profile.css */
+
+.pr-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #0d1117;
+  font-family: "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pr-main {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2.25rem 2.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.06) transparent;
+}
+.pr-main::-webkit-scrollbar {
+  width: 4px;
+}
+.pr-main::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+/* ── HEADER ── */
+.pr-header {
+  margin-bottom: 1.75rem;
+}
+.pr-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.3rem;
+}
+.pr-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* ── ACCOUNT CARD ── */
+.pr-account-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pr-account-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.pr-big-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #93c5fd;
+  flex-shrink: 0;
+}
+
+.pr-account-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+}
+
+.pr-account-email {
+  font-size: 0.8rem;
+  color: #475569;
+  font-family: "DM Mono", monospace;
+  margin-bottom: 6px;
+}
+
+.pr-role-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.pr-account-goal {
+  flex: 2;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  min-width: 180px;
+}
+.pr-goal-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: "DM Mono", monospace;
+  margin-bottom: 5px;
+}
+.pr-goal-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.pr-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.6rem 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #94a3b8;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.pr-reset-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.07);
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.pr-reset-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pr-spinner {
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #94a3b8;
+  border-radius: 50%;
+  animation: pr-spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ── LOADING ── */
+.pr-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 4rem 0;
+  color: #475569;
+  font-size: 0.875rem;
+}
+.pr-load-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.07);
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: pr-spin 0.7s linear infinite;
+}
+
+/* ── ACTIVITY GRID ── */
+.pr-activity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.pr-activity-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 1.35rem;
+}
+
+.pr-activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.pr-activity-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
+}
+
+.pr-activity-count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: "DM Mono", monospace;
+  color: #475569;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.pr-activity-empty {
+  font-size: 0.82rem;
+  color: #475569;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.pr-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ── ITEM ── */
+.pr-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 9px;
+  transition: border-color 0.15s ease;
+}
+.pr-item:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pr-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+.pr-item-title {
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pr-item-date {
+  font-size: 0.72rem;
+  color: #475569;
+  font-family: "DM Mono", monospace;
+}
+
+.pr-status-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pr-vote-item {
+  gap: 0.65rem;
+}
+
+.pr-vote-arrow {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+@keyframes pr-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .pr-main {
+    padding: 4.5rem 1.25rem 1.5rem;
+  }
+  .pr-activity-grid {
+    grid-template-columns: 1fr;
+  }
+  .pr-account-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pr-account-goal {
+    width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+/* src/components/ActivityHeatmap.css */
+
+.ah-root {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  user-select: none;
+}
+
+/* Month labels row */
+.ah-months {
+  display: flex;
+  gap: 3px;
+  padding-left: 0;
+}
+.ah-month {
+  width: 14px;
+  font-size: 0.6rem;
+  color: #334155;
+  font-family: "DM Mono", monospace;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* Grid of weeks */
+.ah-grid {
+  display: flex;
+  gap: 3px;
+}
+
+.ah-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ah-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: opacity 0.15s ease;
+  cursor: default;
+}
+
+.ah-cell.ah-active {
+  background: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+.ah-cell:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+/* Legend */
+.ah-legend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+.ah-legend span {
+  font-size: 0.6rem;
+  color: #334155;
+  font-family: "DM Mono", monospace;
+}

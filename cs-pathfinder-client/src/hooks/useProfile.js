@@ -18,7 +18,7 @@ export const useProfile = (userId) => {
       try {
         const { data, error } = await supabase
           .from("profiles")
-          .select("username, expectations")
+          .select("username, expectations, role")
           .eq("id", userId)
           .maybeSingle(); // We only expect one profile per user
 

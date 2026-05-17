@@ -1,85 +1,278 @@
-/* src/index.css */
+/* src/index.css
+   Global design system — single source of truth for the entire app.
+   All page-level CSS files inherit from these tokens.
+   Font: DM Sans (body) + DM Mono (labels, badges, code)
+*/
 
-/* --- CSS Variables (Theming) --- */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,600&family=DM+Mono:wght@400;500&display=swap");
+
+/* ─────────────────────────────────────────
+   TOKENS
+───────────────────────────────────────── */
 :root {
-  --primary-blue: #0a4fb3;
-  --secondary-blue: #1b5fa3;
-  --dark-blue: #0b3c8a;
-  --bg-gradient: linear-gradient(
-    135deg,
-    var(--dark-blue) 0%,
-    var(--primary-blue) 40%,
-    #0a66c2 100%
-  );
+  /* Colour palette */
+  --color-bg: #0d1117; /* page background */
+  --color-surface: #0a0f1e; /* sidebar, modals */
+  --color-card: rgba(255, 255, 255, 0.03);
+  --color-card-hover: rgba(255, 255, 255, 0.05);
 
-  --text-light: #ffffff;
-  --text-dark: #333333;
-  --bg-light: #f4f7f6; /* Soft off-white for dashboards */
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(255, 255, 255, 0.13);
 
-  --font-main: "Poppins", sans-serif;
-  --font-mono: monospace;
+  --color-blue: #2563eb;
+  --color-blue-light: #3b82f6;
+  --color-blue-glow: rgba(37, 99, 235, 0.18);
 
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --radius: 8px;
+  --color-green: #10b981;
+  --color-green-light: #34d399;
+  --color-green-muted: #6ee7b7;
+
+  --color-yellow: #f59e0b;
+  --color-yellow-light: #fcd34d;
+
+  --color-red: #ef4444;
+  --color-red-light: #fca5a5;
+
+  --color-purple-light: #d8b4fe;
+
+  /* Text */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #475569;
+  --color-text-faint: #334155;
+
+  /* Typography */
+  --font-sans:
+    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-mono: "DM Mono", "Fira Code", "Cascadia Code", monospace;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.4);
+  --shadow-blue: 0 8px 24px rgba(37, 99, 235, 0.3);
+
+  /* Sidebar */
+  --sb-width: 240px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- CSS Reset --- */
-* {
+/* ─────────────────────────────────────────
+   RESET
+───────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────
+   BASE
+───────────────────────────────────────── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: var(--font-main);
-  background: var(--bg-gradient);
-  color: var(--text-light);
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Remove Vite's default #root constraints */
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
   min-height: 100vh;
-  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
 }
 
 a {
+  color: var(--color-blue-light);
   text-decoration: none;
-  color: inherit;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: #93c5fd;
 }
 
-/* --- Reusable Layout Utilities --- */
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+code,
+kbd,
+pre {
+  font-family: var(--font-mono);
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.grid-cards {
-  display: grid;
-  /* This automatically creates responsive columns! */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* --- Reusable UI Components --- */
-.btn-primary {
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius);
-  font-weight: bold;
+/* ─────────────────────────────────────────
+   INTERACTIVE ELEMENTS
+───────────────────────────────────────── */
+button {
+  font-family: var(--font-sans);
   cursor: pointer;
-  border: 2px solid var(--text-light);
-  background-color: transparent;
-  color: var(--text-light);
-  transition: all 0.3s ease;
-  text-align: center;
+  transition: all 0.15s ease;
 }
 
-.btn-primary:hover {
-  background-color: var(--text-light);
-  color: var(--primary-blue);
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-blue-light);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+}
+
+/* ─────────────────────────────────────────
+   SCROLLBAR — global thin dark style
+───────────────────────────────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pill);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ─────────────────────────────────────────
+   UTILITY CLASSES
+   (Minimal — most styling stays in page CSS)
+───────────────────────────────────────── */
+
+/* Visually hidden — accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Truncate text to one line */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS — global keyframes
+   (Referenced by page-level CSS)
+───────────────────────────────────────── */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ─────────────────────────────────────────
+   APP CONTAINER
+───────────────────────────────────────── */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
 }
